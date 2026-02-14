@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://buqwbr6dy35g2"]
+
+[ext_resource type="Script" uid="uid://d0tm8wdymlhaq" path="res://Scenes/Character_Creator.gd" id="1_cnjwq"]
+[ext_resource type="Texture2D" uid="uid://bcwa1n7bgrqvb" path="res://itch_free_thigss/UI/Buttons/Button_Hover_9Slides.png" id="1_s7iyd"]
+[ext_resource type="Texture2D" uid="uid://dl2oyfdo8gsdk" path="res://itch_free_thigss/UI/Banners/Carved_3Slides.png" id="2_s7iyd"]
+[ext_resource type="Texture2D" uid="uid://b0jqykubxhp0f" path="res://itch_free_thigss/UI/Banners/Banner_Horizontal.png" id="3_faxop"]
+[ext_resource type="Texture2D" uid="uid://ruybsg3mcjak" path="res://character creator/Front view Fem-Sheet.png" id="3_k4e76"]
+[ext_resource type="Texture2D" uid="uid://bvxm2il4mljvb" path="res://itch_free_thigss/UI/Banners/Banner_Connection_Down.png" id="4_afg0v"]
+[ext_resource type="Texture2D" uid="uid://155q78312j17" path="res://char_a_p1/1out/char_a_p1_1out_undi_v01.png" id="4_borl1"]
+[ext_resource type="Texture2D" uid="uid://c0bts4lotg7g4" path="res://character creator/ArrowRight1.png" id="7_cnjwq"]
+[ext_resource type="Texture2D" uid="uid://c4f24xorvb35t" path="res://character creator/ArrowLeft.png" id="7_k4e76"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dlcx7"]
+texture = ExtResource("2_s7iyd")
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_faxop"]
+texture = ExtResource("2_s7iyd")
+
+[node name="CharacterCreator" type="Control" unique_id=558234651]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cnjwq")
+
+[node name="BannerConnectionDown" type="Sprite2D" parent="." unique_id=1853297223]
+position = Vector2(487, 228)
+scale = Vector2(2.56771, 2.32292)
+texture = ExtResource("4_afg0v")
+
+[node name="CharacterPreview" type="Node2D" parent="." unique_id=1281289295]
+position = Vector2(483, 243)
+scale = Vector2(2, 2)
+
+[node name="BodySprite" type="Sprite2D" parent="CharacterPreview" unique_id=786694853]
+texture = ExtResource("3_k4e76")
+hframes = 23
+
+[node name="HairSprite" type="Sprite2D" parent="CharacterPreview" unique_id=1583784825]
+visible = false
+hframes = 8
+vframes = 8
+
+[node name="ClothesSprite" type="Sprite2D" parent="CharacterPreview" unique_id=1177320719]
+visible = false
+texture = ExtResource("4_borl1")
+hframes = 8
+vframes = 8
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=532015234]
+visible = false
+layout_mode = 0
+offset_left = 298.0
+offset_top = 470.0
+offset_right = 531.0
+offset_bottom = 836.0
+rotation = -3.1412
+texture = ExtResource("1_s7iyd")
+
+[node name="GenderButtons" type="HBoxContainer" parent="." unique_id=642618162]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 163.0
+offset_right = 233.0
+offset_bottom = 203.0
+
+[node name="FemaleButton" type="Button" parent="GenderButtons" unique_id=765391525]
+layout_mode = 2
+text = "Female"
+
+[node name="MaleButton" type="Button" parent="GenderButtons" unique_id=834379793]
+layout_mode = 2
+text = "Male"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1103785888]
+visible = false
+layout_mode = 0
+offset_left = 90.0
+offset_top = 214.0
+offset_right = 344.0
+offset_bottom = 254.0
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=209116610]
+layout_mode = 2
+text = "Fingers"
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=951168187]
+layout_mode = 2
+text = "Claws"
+
+[node name="Button3" type="Button" parent="HBoxContainer" unique_id=1672449657]
+layout_mode = 2
+text = "Paws"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1910920724]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 101.0
+offset_top = -55.0
+offset_right = 266.0
+offset_bottom = 223.0
+grow_vertical = 2
+
+[node name="SkinLabel" type="Label" parent="VBoxContainer" unique_id=1486709017]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_dlcx7")
+text = "Choose Skin Tone"
+
+[node name="SkinSelector" type="OptionButton" parent="VBoxContainer" unique_id=1078322950]
+layout_mode = 2
+
+[node name="SkinColorPicker" type="ColorPickerButton" parent="VBoxContainer" unique_id=1313782840]
+layout_mode = 2
+
+[node name="ClothesLabel3" type="Label" parent="VBoxContainer" unique_id=1249110216]
+layout_mode = 2
+text = "Choose Clothes Style!"
+
+[node name="ClothesStyleArrows" type="HBoxContainer" parent="VBoxContainer" unique_id=1845221261]
+layout_mode = 2
+
+[node name="ClothesLeftButton" type="Button" parent="VBoxContainer/ClothesStyleArrows" unique_id=418871465]
+layout_mode = 2
+icon = ExtResource("7_k4e76")
+
+[node name="Button2" type="Button" parent="VBoxContainer/ClothesStyleArrows" unique_id=1519674333]
+layout_mode = 2
+text = "pic"
+
+[node name="ClothesRightButton" type="Button" parent="VBoxContainer/ClothesStyleArrows" unique_id=1825880294]
+layout_mode = 2
+icon = ExtResource("7_cnjwq")
+icon_alignment = 2
+
+[node name="HairLabel" type="Label" parent="VBoxContainer" unique_id=1100061448]
+layout_mode = 2
+theme_override_constants/line_spacing = 4
+theme_override_constants/paragraph_spacing = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_faxop")
+text = "Chose Hair Style!"
+
+[node name="HairStyleArrows" type="HBoxContainer" parent="VBoxContainer" unique_id=1400884139]
+layout_mode = 2
+
+[node name="HairColorPicker" type="ColorPickerButton" parent="VBoxContainer/HairStyleArrows" unique_id=2137099700]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_icon = true
+
+[node name="HairLeftButton" type="Button" parent="VBoxContainer/HairStyleArrows" unique_id=1348390781]
+layout_mode = 2
+icon = ExtResource("7_k4e76")
+
+[node name="HairLeftButton2" type="Button" parent="VBoxContainer/HairStyleArrows" unique_id=1547106996]
+layout_mode = 2
+text = "pic"
+
+[node name="hairRightButton" type="Button" parent="VBoxContainer/HairStyleArrows" unique_id=2119773185]
+layout_mode = 2
+icon = ExtResource("7_cnjwq")
+
+[node name="ReadyButton" type="Button" parent="." unique_id=2088934877]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 433.0
+offset_right = 871.0
+offset_bottom = 464.0
+text = "Ready?"
+
+[node name="BannerHorizontal" type="Sprite2D" parent="." unique_id=1359835556]
+visible = false
+position = Vector2(484, 273)
+rotation = -3.14287
+scale = Vector2(1.93229, 2.8151)
+texture = ExtResource("3_faxop")
+
+[connection signal="pressed" from="GenderButtons/FemaleButton" to="." method="_on_FemaleButton_pressed"]
+[connection signal="pressed" from="GenderButtons/MaleButton" to="." method="_on_MaleButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ClothesStyleArrows/ClothesLeftButton" to="." method="_on_ClothesLeftButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ClothesStyleArrows/ClothesRightButton" to="." method="_on_ClothesRightButton_pressed"]
+[connection signal="color_changed" from="VBoxContainer/HairStyleArrows/HairColorPicker" to="." method="_onHairColorPicker_color_changed"]
+[connection signal="pressed" from="VBoxContainer/HairStyleArrows/HairLeftButton" to="." method="_on_HairLeftButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HairStyleArrows/hairRightButton" to="." method="_on_HairRightButton_pressed"]

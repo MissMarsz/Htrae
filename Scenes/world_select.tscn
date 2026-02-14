@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://i2iwdbagopm4"]
+
+[ext_resource type="Script" uid="uid://cn6728a536jwy" path="res://Scenes/world_select.gd" id="1_ylq8w"]
+[ext_resource type="Texture2D" uid="uid://d06io2sgqoi07" path="res://itch_free_thigss/UI/Buttons/Button_Disable_9Slides.png" id="2_01xfc"]
+
+[node name="WorldSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ylq8w")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.42
+offset_top = -101.3
+offset_right = 124.42
+offset_bottom = 101.3
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_01xfc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.5
+offset_top = -64.0
+offset_right = 61.5
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Pick Your World"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play World 1"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play World 1"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play World 3"
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -174.0
+offset_top = -81.0
+offset_right = -83.0
+offset_bottom = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Continue"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -206.0
+offset_top = -133.0
+offset_right = -59.0
+offset_bottom = -102.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Create new World"

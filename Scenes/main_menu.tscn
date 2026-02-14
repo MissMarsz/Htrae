@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://dch15qo0htt4a"]
+
+[ext_resource type="AudioStream" uid="uid://drkyc8fo2i6es" path="res://Main Menu/MenuAudio2.wav" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://jt3k1mf4scx7" path="res://Main Menu/button_sheet126x63.png" id="3_n45e2"]
+[ext_resource type="PackedScene" uid="uid://cmbx2slvcw1a1" path="res://Scenes/character_select.tscn" id="3_opfnp"]
+[ext_resource type="PackedScene" uid="uid://dfs5fgam6usdp" path="res://settings_menu.tscn" id="4_n45e2"]
+[ext_resource type="Script" uid="uid://ont2uihyep65" path="res://GameButton.gd" id="4_opfnp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_28flt"]
+font_size = 90
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opfnp"]
+atlas = ExtResource("3_n45e2")
+region = Rect2(0, 0, 126, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp0ys"]
+atlas = ExtResource("3_n45e2")
+region = Rect2(126, 0, 126, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhxw7"]
+atlas = ExtResource("3_n45e2")
+region = Rect2(252, 0, 126, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trj04"]
+atlas = ExtResource("3_n45e2")
+region = Rect2(378, 0, 126, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16hvj"]
+atlas = ExtResource("3_n45e2")
+region = Rect2(504, 0, 126, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr1f0"]
+atlas = ExtResource("3_n45e2")
+region = Rect2(630, 0, 126, 63)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1dhk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opfnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cp0ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhxw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trj04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16hvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr1f0")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main_Menu" type="Control" unique_id=1685486804]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1683436035]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -149.0
+offset_top = -192.0
+offset_right = 150.0
+offset_bottom = -55.0
+grow_horizontal = 2
+text = " Htrea"
+label_settings = SubResource("LabelSettings_28flt")
+
+[node name="MainMenuButton" type="VBoxContainer" parent="." unique_id=996056840]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -7.0
+offset_right = 131.0
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MainMenuButton" unique_id=738793586]
+layout_mode = 2
+text = "Start"
+flat = true
+script = ExtResource("4_opfnp")
+target_scene = ExtResource("3_opfnp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainMenuButton/StartButton" unique_id=2145063867]
+position = Vector2(130, 18)
+sprite_frames = SubResource("SpriteFrames_t1dhk")
+speed_scale = 2.0
+
+[node name="Label" type="Label" parent="MainMenuButton/StartButton" unique_id=1155652971]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.0
+offset_top = -1.0
+offset_right = 15.0
+offset_bottom = 22.0
+grow_horizontal = 2
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsButton" type="Button" parent="MainMenuButton" unique_id=470585057]
+layout_mode = 2
+text = "Settings"
+flat = true
+script = ExtResource("4_opfnp")
+target_scene = ExtResource("4_n45e2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainMenuButton/SettingsButton" unique_id=1275932549]
+position = Vector2(130, 25)
+sprite_frames = SubResource("SpriteFrames_t1dhk")
+speed_scale = 2.0
+
+[node name="Label" type="Label" parent="MainMenuButton/SettingsButton" unique_id=1833563114]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -9.5
+offset_right = 17.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+
+[node name="QuitterButton" type="Button" parent="MainMenuButton" unique_id=36963818]
+layout_mode = 2
+text = "Quitter"
+flat = true
+script = ExtResource("4_opfnp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainMenuButton/QuitterButton" unique_id=57956133]
+position = Vector2(129, 32)
+sprite_frames = SubResource("SpriteFrames_t1dhk")
+speed_scale = 2.0
+
+[node name="Label" type="Label" parent="MainMenuButton/QuitterButton" unique_id=788256585]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.87100005
+anchor_right = 0.5
+anchor_bottom = 0.87100005
+offset_left = -23.0
+offset_top = -14.001001
+offset_right = 18.0
+offset_bottom = 8.998999
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=720743139]
+stream = ExtResource("2_48xlc")
+autoplay = true
+bus = &"Music"
+
+[connection signal="minimum_size_changed" from="." to="." method="_on_minimum_size_changed"]
+[connection signal="mouse_entered" from="MainMenuButton/StartButton" to="MainMenuButton/StartButton" method="_on_start_button_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenuButton/StartButton" to="MainMenuButton/StartButton" method="_on_start_button_mouse_exited"]
+[connection signal="pressed" from="MainMenuButton/StartButton" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="MainMenuButton/SettingsButton" to="MainMenuButton/SettingsButton" method="_on_settings_button_mouse_entered"]
+[connection signal="mouse_entered" from="MainMenuButton/SettingsButton" to="MainMenuButton/SettingsButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenuButton/SettingsButton" to="MainMenuButton/SettingsButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="MainMenuButton/SettingsButton" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenuButton/SettingsButton" to="MainMenuButton/SettingsButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="MainMenuButton/QuitterButton" to="MainMenuButton/QuitterButton" method="_on_quitter_button_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenuButton/QuitterButton" to="MainMenuButton/QuitterButton" method="_on_quitter_button_mouse_exited"]
+[connection signal="pressed" from="MainMenuButton/QuitterButton" to="." method="_on_quit_pressed"]

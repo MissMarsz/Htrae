@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://cmbx2slvcw1a1"]
+
+[ext_resource type="Script" uid="uid://cah5rwr0nof2" path="res://Scripts/character_select.gd" id="1_uelh3"]
+[ext_resource type="Texture2D" uid="uid://d28c4j1t85kid" path="res://itch_free_thigss/UI/Buttons/Button_Disable_3Slides.png" id="2_o8raw"]
+[ext_resource type="Texture2D" uid="uid://bcwa1n7bgrqvb" path="res://itch_free_thigss/UI/Buttons/Button_Hover_9Slides.png" id="3_wqg5r"]
+[ext_resource type="Script" uid="uid://ont2uihyep65" path="res://GameButton.gd" id="4_4yuuj"]
+[ext_resource type="Texture2D" uid="uid://jt3k1mf4scx7" path="res://Main Menu/button_sheet126x63.png" id="5_2b87j"]
+[ext_resource type="PackedScene" uid="uid://buqwbr6dy35g2" path="res://Scenes/character_creator.tscn" id="5_krxhl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_krxhl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2b87j"]
+texture = ExtResource("2_o8raw")
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4yuuj"]
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqg5r"]
+texture = ExtResource("2_o8raw")
+texture_margin_top = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opfnp"]
+atlas = ExtResource("5_2b87j")
+region = Rect2(0, 0, 126, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp0ys"]
+atlas = ExtResource("5_2b87j")
+region = Rect2(126, 0, 126, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhxw7"]
+atlas = ExtResource("5_2b87j")
+region = Rect2(252, 0, 126, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trj04"]
+atlas = ExtResource("5_2b87j")
+region = Rect2(378, 0, 126, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16hvj"]
+atlas = ExtResource("5_2b87j")
+region = Rect2(504, 0, 126, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr1f0"]
+atlas = ExtResource("5_2b87j")
+region = Rect2(630, 0, 126, 63)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_krxhl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opfnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cp0ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhxw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trj04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16hvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr1f0")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterSelect" type="Control" unique_id=776251110]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = -44.0
+offset_right = 101.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_uelh3")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=2099283527]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -133.0
+offset_top = -121.0
+offset_right = 133.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_wqg5r")
+
+[node name="VBoxContainerSaves" type="VBoxContainer" parent="." unique_id=1582765203]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -78.5
+offset_top = -93.0
+offset_right = 78.5
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainerSaves" unique_id=386391456]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_krxhl")
+text = "Characters"
+
+[node name="CharacterSlotButton2" type="Button" parent="VBoxContainerSaves" unique_id=1831955846]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_2b87j")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4yuuj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wqg5r")
+text = "Save"
+
+[node name="CharacterSlotButton1" type="Button" parent="VBoxContainerSaves" unique_id=1341011436]
+layout_mode = 2
+text = "Save 2"
+
+[node name="Button" type="Button" parent="VBoxContainerSaves" unique_id=170462631]
+layout_mode = 2
+text = "save 3"
+
+[node name="Label2" type="Label" parent="." unique_id=185745404]
+layout_mode = 0
+offset_left = -13.5
+offset_top = 231.0
+offset_right = 221.5
+offset_bottom = 254.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_krxhl")
+text = "Double click or press Continue"
+
+[node name="MarginContainerNewOrContinue" type="MarginContainer" parent="." unique_id=299355311]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -102.0
+offset_top = -93.0
+offset_right = 102.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainerNewOrContinue" unique_id=683127455]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainerNewOrContinue/VBoxContainer" unique_id=1191609618]
+layout_mode = 2
+text = "Select or Create Character"
+
+[node name="CreateNewButton" type="Button" parent="MarginContainerNewOrContinue/VBoxContainer" unique_id=507442773]
+layout_mode = 2
+text = "Create New Character"
+flat = true
+script = ExtResource("4_4yuuj")
+target_scene = ExtResource("5_krxhl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainerNewOrContinue/VBoxContainer/CreateNewButton" unique_id=1302063398]
+position = Vector2(130, 25)
+sprite_frames = SubResource("SpriteFrames_krxhl")
+speed_scale = 2.0
+
+[node name="Label" type="Label" parent="MarginContainerNewOrContinue/VBoxContainer/CreateNewButton" unique_id=1478051781]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 211.0
+offset_right = 154.0
+offset_bottom = 234.0
+text = "New Character"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="MarginContainerNewOrContinue/VBoxContainer/CreateNewButton" to="MarginContainerNewOrContinue/VBoxContainer/CreateNewButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainerNewOrContinue/VBoxContainer/CreateNewButton" to="MarginContainerNewOrContinue/VBoxContainer/CreateNewButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainerNewOrContinue/VBoxContainer/CreateNewButton" to="MarginContainerNewOrContinue/VBoxContainer/CreateNewButton" method="_on_create_new_pressed"]
+[connection signal="pressed" from="MarginContainerNewOrContinue/VBoxContainer/CreateNewButton" to="MarginContainerNewOrContinue/VBoxContainer/CreateNewButton" method="_on_pressed"]

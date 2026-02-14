@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cjs4k2aibx82"]
+
+[ext_resource type="Script" uid="uid://chwc1u3i1xxlb" path="res://items/scripts/item_data.gd" id="1_rhfu3"]
+[ext_resource type="Texture2D" uid="uid://xa8cw65trxk8" path="res://items/Sprite/BaseStick.png" id="2_racrv"]
+
+[resource]
+script = ExtResource("1_rhfu3")
+name = "Stick"
+description = "Stick"
+texture = ExtResource("2_racrv")
+category = "Resource"
+stack_size = 1
+rarity = 1
+sell_value = 0
+metadata/_custom_type_script = "uid://chwc1u3i1xxlb"

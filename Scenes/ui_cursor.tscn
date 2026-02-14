@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://x1mwtxddvs4p"]
+
+[ext_resource type="Script" uid="uid://fexwsrsie10b" path="res://Scripts/ui_cursor.gd" id="1_83pwg"]
+[ext_resource type="Texture2D" uid="uid://dm3wnp4eitqbd" path="res://itch_free_thigss/UI/Pointers/01.png" id="2_1k5ha"]
+
+[node name="UICursor" type="CanvasLayer"]
+script = ExtResource("1_83pwg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1k5ha")

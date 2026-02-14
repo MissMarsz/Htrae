@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://kv87tj26qju6"]
+
+[ext_resource type="Script" uid="uid://j01l7u5pmrgl" path="res://furniture_item.gd" id="1_6pqht"]
+[ext_resource type="Texture2D" uid="uid://bx8j81c5aabxi" path="res://Player/wood_short_chair_Sheet.png" id="1_ctnji"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6pqht"]
+radius = 13.0
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=2092573551]
+script = ExtResource("1_6pqht")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=28546475]
+position = Vector2(252, 138)
+texture = ExtResource("1_ctnji")
+hframes = 4
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=841106243]
+position = Vector2(253, 146)
+shape = SubResource("CircleShape2D_6pqht")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1586660805]
+position = Vector2(258, 143)
+collision_layer = 3

@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://knxayx37n2g5"]
+
+[ext_resource type="Script" uid="uid://cdskbyut3vr16" path="res://inventory/inventoryUI.gd" id="1_qse2j"]
+[ext_resource type="PackedScene" uid="uid://cvap3oi6uix4r" path="res://inventory/inventory_slot.tscn" id="2_f8i2h"]
+[ext_resource type="Script" uid="uid://c2pnvorkl8uhb" path="res://inventory/inventory_slot.gd" id="2_lhcfm"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 186.0
+offset_top = 285.0
+offset_right = 575.0
+offset_bottom = 542.0
+script = ExtResource("1_qse2j")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+layout_mode = 2
+offset_right = 226.0
+offset_bottom = 82.0
+columns = 5
+script = ExtResource("2_lhcfm")
+
+[node name="InventorySlot" parent="Control/GridContainer" instance=ExtResource("2_f8i2h")]
+layout_mode = 2
+script = null
+
+[node name="InventorySlot2" parent="Control/GridContainer" instance=ExtResource("2_f8i2h")]
+layout_mode = 2
+script = null
+
+[node name="InventorySlot3" parent="Control/GridContainer" instance=ExtResource("2_f8i2h")]
+layout_mode = 2
+script = null
+
+[node name="InventorySlot4" parent="Control/GridContainer" instance=ExtResource("2_f8i2h")]
+layout_mode = 2
+script = null
+
+[node name="InventorySlot5" parent="Control/GridContainer" instance=ExtResource("2_f8i2h")]
+layout_mode = 2
+script = null
+
+[node name="InventorySlot6" parent="Control/GridContainer" instance=ExtResource("2_f8i2h")]
+layout_mode = 2
+script = null
+
+[node name="InventorySlot7" parent="Control/GridContainer" instance=ExtResource("2_f8i2h")]
+layout_mode = 2
+script = null
+
+[node name="InventorySlot8" parent="Control/GridContainer" instance=ExtResource("2_f8i2h")]
+layout_mode = 2
+script = null
+
+[node name="InventorySlot9" parent="Control/GridContainer" instance=ExtResource("2_f8i2h")]
+layout_mode = 2
+script = null
+
+[node name="InventorySlot10" parent="Control/GridContainer" instance=ExtResource("2_f8i2h")]
+layout_mode = 2
+script = null
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/GridContainer"]
+layout_mode = 2
+
+[node name="SortButton" type="Button" parent="Control/GridContainer/HBoxContainer"]
+layout_mode = 2
+text = "sort"
+
+[node name="DeleteButton" type="Button" parent="Control/GridContainer/HBoxContainer"]
+layout_mode = 2
+text = "Delete"
+
+[node name="DropButton" type="Button" parent="Control/GridContainer/HBoxContainer"]
+layout_mode = 2
+text = "Drop"
